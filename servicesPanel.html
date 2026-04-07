@@ -1,0 +1,95 @@
+<section class="services-panel">
+    <article class="service-card">
+        <div class="service-icon">
+            <img src="images/privacy/delivery%20icon.png" alt="Delivery icon">
+        </div>
+        <p class="service-title">Delivery</p>
+        <p class="service-text">Delivered within 2 to 3 days</p>
+    </article>
+    <article class="service-card">
+        <div class="service-icon">
+            <img src="images/privacy/payment%20icon.png" alt="Payment icon">
+        </div>
+        <p class="service-title">Payment</p>
+        <p class="service-text">Secured payment</p>
+    </article>
+    <article class="service-card">
+        <div class="service-icon">
+            <img src="images/privacy/contact%20icon.png" alt="Contact icon">
+        </div>
+        <p class="service-title">Contact</p>
+        <p class="service-text">90000 91245<br>91427 84571</p>
+    </article>
+    <article class="service-card">
+        <div class="service-icon">
+            <img src="images/privacy/location%20icon.png" alt="Location icon">
+        </div>
+        <p class="service-title">Location</p>
+        <p class="service-text">Salem, Tamilnadu</p>
+    </article>
+</section>
+<style>
+    .services-panel {
+        background: #fde8ee;
+        border-radius: 24px;
+        padding: 32px 20px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+        margin: 40px auto 40px;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #E61A52;
+        display: grid;
+        place-items: center;
+    }
+
+    .service-icon img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .service-title {
+        margin: 0;
+        font-size: 1rem;
+        color: #d30e3c;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+    }
+
+    .service-text {
+        margin: 0;
+        font-size: 0.98rem;
+        line-height: 1.6;
+        color: #111;
+        font-weight: 600;
+    }
+
+    @media (max-width: 780px) {
+        .services-panel {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 520px) {
+        .services-panel {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
