@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: 'Inter', Arial, sans-serif;
+            --brand: #E61A52;
+            --text: #111;
+            --white: #ffffff;
+            --surface: #fff7c9;
+            --surface-strong: #ffe770;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fff;
+            color: var(--text);
+        }
+
+        .page-wrapper {
+            padding: 0 20px 40px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            display: grid;
+            place-items: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, var(--surface-strong), var(--surface));
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: clamp(1.25rem, 2vw, 1.75rem);
+            color: #e81c5d;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+        }
+
+        .categories-section {
+            padding: 40px 0 20px;
+            background: transparent;
+            text-align: center;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
+        }
+
+        .category-card {
+            border: 1px solid rgba(232, 28, 93, 0.13);
+            border-radius: 28px;
+            overflow: hidden;
+            background: #ffffff;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            width: 100%;
+            max-width: 320px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 28px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-card img {
+            width: 100%;
+            display: block;
+            min-height: 260px;
+            object-fit: cover;
+        }
+
+        .category-card-body {
+            padding: 20px 18px 24px;
+        }
+
+        .category-card-body p {
+            margin: 0;
+            font-size: 1rem;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        .view-all-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 32px auto 0;
+            padding: 14px 30px;
+            border: 2px solid #e81c5d;
+            border-radius: 999px;
+            background: transparent;
+            color: #e81c5d;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .view-all-button:hover {
+            background: #e81c5d;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 980px) {
+            .categories-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-header {
+                padding: 28px 16px;
+            }
+
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="page-header">
+        <h1>CATEGORIES</h1>
+    </div>
+
+    <div class="page-wrapper">
+        <section class="categories-section">
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="images/home/categories/1.png" alt="Educational Toys">
+                    <div class="category-card-body">
+                        <p>Educational Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/2.png" alt="Seasonal Toys">
+                    <div class="category-card-body">
+                        <p>Seasonal Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/3.png" alt="Wooden Toys">
+                    <div class="category-card-body">
+                        <p>Wooden Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/4.png" alt="Mystery Boxes">
+                    <div class="category-card-body">
+                        <p>Mystery Boxes</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/5.png" alt="Fluffy Toys">
+                    <div class="category-card-body">
+                        <p>Fluffy Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/6.png" alt="Beach Toys">
+                    <div class="category-card-body">
+                        <p>Beach Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/7.png" alt="Novelty Toys">
+                    <div class="category-card-body">
+                        <p>Novelty Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/8.png" alt="Outdoor Toys">
+                    <div class="category-card-body">
+                        <p>Outdoor Toys</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/9.png" alt="Slime & Putty">
+                    <div class="category-card-body">
+                        <p>Slime & Putty</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="images/home/categories/10.png" alt="Creative Toys">
+                    <div class="category-card-body">
+                        <p>Creative Toys</p>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="view-all-button">View All</a>
+        </section>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        const loadComponent = (url, placeholderId) => {
+            return fetch(url)
+                .then(response => response.text())
+                .then(html => {
+                    const wrapper = document.createElement('div');
+                    wrapper.innerHTML = html;
+                    const placeholder = document.getElementById(placeholderId);
+                    if (placeholder) placeholder.replaceWith(wrapper);
+                })
+                .catch(err => console.error(`Failed to load ${url}:`, err));
+        };
+
+        loadComponent('navbar.html', 'navbar-placeholder');
+        loadComponent('footer.html', 'footer-placeholder');
+    </script>
+</body>
+
+</html>
