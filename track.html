@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Track Your Order</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <style>
         :root {
@@ -269,7 +269,7 @@
         }
 
         .page-header {
-            background: #fff4c2;
+            background: #EED76D;
             padding: 42px 20px;
             text-align: center;
         }
@@ -277,15 +277,113 @@
         .page-header h1 {
             margin: 0;
             font-size: 2rem;
-            color: #5c2d91;
+            color: #f50000;
             letter-spacing: 0.02em;
             font-weight: 700;
+            text-transform: uppercase;
         }
 
         .page-content {
             max-width: 900px;
             margin: 0 auto;
             padding: 36px 20px 60px;
+        }
+
+        .track-page {
+            text-align: center;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .track-headline {
+            margin: 0 auto 28px;
+            font-size: 2rem;
+            font-weight: 800;
+            color: #111;
+            max-width: 900px;
+            line-height: 1.1;
+        }
+
+        .track-note {
+            margin: 0 auto 28px;
+            max-width: 900px;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.6;
+            text-transform: uppercase;
+            color: #111;
+        }
+
+        .track-copy {
+            margin: 0 auto 32px;
+            max-width: 820px;
+            font-size: 1.05rem;
+            line-height: 1.9;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .track-form {
+            display: grid;
+            gap: 24px;
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        .track-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+            align-items: start;
+        }
+
+        .track-field {
+            text-align: left;
+        }
+
+        .track-field label {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #E61A52;
+        }
+
+        .track-field input {
+            width: 100%;
+            border: 1px solid #111;
+            border-radius: 999px;
+            padding: 16px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #111;
+            outline: none;
+            background: transparent;
+        }
+
+        .track-button {
+            width: max-content;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 999px;
+            background: #E61A52;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            justify-self: start;
+        }
+
+        @media (max-width: 720px) {
+            .track-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .track-button {
+                justify-self: center;
+            }
         }
 
         .section-title {
@@ -303,15 +401,6 @@
             line-height: 1.8;
             font-weight: 600;
             color: #121212;
-        }
-
-        .page-content h2 {
-            margin: 0 0 1.5rem;
-            font-size: 1.5rem;
-            line-height: 1.8;
-            font-weight: 600;
-            text-align: center;
-            color: #d30e3c;
         }
 
         h3 {
@@ -353,8 +442,8 @@
                 <div class="top-text" onclick="window.location.href='./wholesale.html'"
                     style="cursor:pointer; text-decoration:none;">BUYING IN BULK?...CLICK HERE</div>
                 <div class="top-links">
-                    <a href="./delivery.html">Delivery Information</a>
-                    <a href="./track.html">Track My Order</a>
+                    <a href="./delivery.html">Track Your Order</a>
+                    <a href="#">Track My Order</a>
                     <a href="./faq.html">FAQ</a>
                     <span class="icon">🕒</span>
                 </div>
@@ -424,52 +513,36 @@
     </div>
 
     <header class="page-header">
-        <h1>About</h1>
+        <h1>Track Your Order</h1>
     </header>
+    <main class="page-content">
+        <section class="track-page">
+            <h3>Standard economy rate delivery charge ( 2-5 working days )</h3>
+            <p class="track-note">PLEASE NOTE: ORDERS PLACED AT WEEKENDS &amp; BANK HOLIDAYS WILL BE DISPATCHED ON THE
+                NEXT WORKING DAY.</p>
+            <p class="track-copy">To track your order please enter your Order ID in the box below and press the "Track"
+                button. This was given to you on your receipt and in the confirmation email you should have received.
+            </p>
 
-    <div class="page-content">
-        <h2 class="section-title">KIDS STUFFS</h2>
-        <p>3 Years of Iconic Indoor plants sale, Ethnic & Modern Pots collections and Bonsai Trees.</p>
+            <form class="track-form" action="#" method="get">
+                <div class="track-grid">
+                    <div class="track-field">
+                        <label for="order-id">Order ID</label>
+                        <input id="order-id" name="order-id" type="text"
+                            placeholder="Found in your order confirmation email">
+                    </div>
+                    <div class="track-field">
+                        <label for="billing-email">Billing Email</label>
+                        <input id="billing-email" name="billing-email" type="email"
+                            placeholder="Email you used during checkout">
+                    </div>
+                </div>
+                <button type="submit" class="track-button">TRACK</button>
+            </form>
+        </section>
 
-        <h2 class="section-title">BIGGER. BETTER. BRANDS.</h2>
-        <p>Sonee Sports is an inspirational portfolio of well-diversified iconic sports, lifestyle and fashion brands
-            presented through unrivaled creativity and innovation.</p>
-        <p>At Sonee Sports we deliver branded products, exceptional service, unparalleled customer support and
-            operational excellence to create highest value to our customers, employees and suppliers. Through a thorough
-            integration of our human resource, state of the art ERP system and E-commerce platform,</p>
-
-        <h2>Mission</h2>
-        <p>Our mission is to improve the performance and lives of sports and physical fitness participants in Maldives.
-            We do that by presenting world leading brands, integrated with exceptional service, unparalleled support,
-            and operational excellence to facilitate sports and play.</p>
-
-        <h2>Vision</h2>
-        <p>We envision a future where Maldives embraces healthy living as part of our culture Bigger Better Brands</p>
-
-        <h2>Health</h2>
-        <p>Sonee Sports will invest in promoting healthy lifestyles through play and sport because healthy people
-            contribute to improving the society by channelling the physical and mental energy generated from sports to
-            action, creativity, and innovation.</p>
-
-        <h2>Social Change</h2>
-        <p>We will invest in the power of sports to bring social change. Sports provide a powerful platform to advance
-            social change. Our purpose of transforming the Maldivian Society can only be achieved through inclusivity of
-            all members of the society and the sustainability of the environment in which we live.</p>
-
-        <h2>Joy</h2>
-        <p>Sonee Sports will invest in enhancing the lives of a healthy nation by helping people experience the joy of
-            celebrating life. We will redefine social gatherings and healthy eating 2030 Initiatives & Goals</p>
-
-        <h2>Peace</h2>
-        <p>Sonee Sports will invest in enhancing the lives of a healthy nation by helping people experience the joy of
-            celebrating life. We will redefine social gatherings and healthy eating 2030 Initiatives & Goals</p>
-
-        <h2>Health</h2>
-        <p>Sonee Sports will invest in promoting healthy lifestyles through play and sport because healthy people
-            contribute to improving the society by channelling the physical and mental energy generated from sports to
-            action, creativity, and innovation.</p>
-    </div>
-
+        <div id="services-panel-placeholder"></div>
+    </main>
     <div id="footer-placeholder"></div>
     <script>
         const loadComponent = (url, placeholderId) => {
