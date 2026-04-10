@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Cart</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
     <style>
         :root {
@@ -269,7 +269,7 @@
         }
 
         .page-header {
-            background: #fff4c2;
+            background: #EED76D;
             padding: 42px 20px;
             text-align: center;
         }
@@ -277,24 +277,176 @@
         .page-header h1 {
             margin: 0;
             font-size: 2rem;
-            color: #5c2d91;
+            color: #f50000;
             letter-spacing: 0.02em;
             font-weight: 700;
         }
 
         .page-content {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 36px 20px 60px;
         }
 
-        .section-title {
-            margin: 0 0 24px;
-            color: #d30e3c;
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
+        .cart-page {
+            display: grid;
+            grid-template-columns: 1.5fr 0.8fr;
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .cart-list,
+        .cart-summary {
+            background: #ffe7f0;
+            border-radius: 24px;
+            padding: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 118px 1fr auto;
+            gap: 18px;
+            align-items: center;
+            padding: 18px;
+            background: #ffe7f0;
+            border-radius: 24px;
+            margin-bottom: 18px;
+        }
+
+        .cart-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .cart-item img {
+            width: 118px;
+            height: 118px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+        }
+
+        .cart-item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .cart-item-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #111;
+            line-height: 1.2;
+        }
+
+        .cart-item-brand {
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #111;
             text-transform: uppercase;
+        }
+
+        .cart-item-price {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #111;
+            margin-top: 6px;
+        }
+
+        .cart-quantity {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #e61a52;
+            color: #fff;
+            border-radius: 18px;
+            padding: 8px 14px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .cart-quantity button {
+            width: 28px;
+            height: 28px;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.22);
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: 1;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .summary-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .summary-row.total {
+            margin-top: 8px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(17, 17, 17, 0.12);
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .checkout-button {
+            width: 100%;
+            padding: 16px 0;
+            border: none;
+            border-radius: 14px;
+            background: #e61a52;
+            color: #fff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .secure-payment {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #111;
+        }
+
+        .secure-payment span {
+            font-size: 1.25rem;
+        }
+
+        @media (max-width: 980px) {
+            .cart-page {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .cart-item {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .cart-quantity {
+                justify-content: flex-start;
+                width: fit-content;
+            }
         }
 
         .page-content p {
@@ -305,162 +457,13 @@
             color: #121212;
         }
 
-        .blog-cards {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 36px 20px 60px;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 22px;
-        }
-
-        .blog-card {
-            background: #fff;
-            border: 1px solid rgba(230, 26, 82, 0.18);
-            border-radius: 18px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            padding: 8px;
-        }
-
-        .blog-card img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-            aspect-ratio: 4 / 5;
-        }
-
-        .blog-card-body {
-            padding: 16px 16px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            flex: 1;
-        }
-
-        .blog-card-body .meta {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 0.02em;
-        }
-
-        .blog-card-body h3 {
-            margin: 0;
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: #111;
-        }
-
-        .blog-card-body p {
-            margin: 0;
-            font-size: 0.98rem;
-            line-height: 1.7;
-            color: #333;
-            font-weight: 600;
-        }
-
-        .blog-card-body button {
-            border: none;
-            background: #e61a52;
-            color: #fff;
-            border-radius: 999px;
-            padding: 12px 18px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            width: 100%;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-
-        .blog-card-body button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 25px rgba(230, 26, 82, 0.18);
-        }
-
-        .blog-banner {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto 40px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 70px rgba(0, 0, 0, 0.08);
-        }
-
-        .blog-banner img {
-            width: 100%;
-            display: block;
-            object-fit: cover;
-        }
-
-        .blog-banner-content {
-            position: absolute;
-            inset: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px 30px;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.55));
-        }
-
-        .banner-copy {
-            max-width: 700px;
-            text-align: center;
-            color: #fff;
-        }
-
-        .banner-copy h2 {
-            margin: 0 0 18px;
-            font-size: 2.2rem;
-            line-height: 1.1;
-            letter-spacing: 0.02em;
-            font-weight: 800;
-            text-transform: uppercase;
-        }
-
-        .banner-copy p {
-            margin: 0 0 24px;
-            font-size: 1rem;
+        .page-content h2 {
+            margin: 0 0 1.5rem;
+            font-size: 1.5rem;
             line-height: 1.8;
-            color: rgba(255, 255, 255, 0.95);
             font-weight: 600;
-        }
-
-        .banner-button {
-            border: none;
-            background: #fff;
-            color: #e61a52;
-            border-radius: 999px;
-            padding: 14px 28px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .banner-button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 10px 25px rgba(230, 26, 82, 0.18);
-        }
-
-        @media (max-width: 940px) {
-            .cards-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (max-width: 640px) {
-            .cards-grid {
-                grid-template-columns: 1fr;
-            }
+            text-align: center;
+            color: #d30e3c;
         }
 
         h3 {
@@ -574,107 +577,111 @@
     </div>
 
     <header class="page-header">
-        <h1>Blogs</h1>
+        <h1>Basket</h1>
     </header>
+    <main class="page-content">
+        <div class="cart-page">
+            <div class="cart-list">
+                <div class="cart-item">
+                    <img src="images/cart/1.png" alt="Dinosaur Brick Figure in egg">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Dinosaur Brick Figure in egg</div>
+                        <div class="cart-item-brand">MELISAA</div>
+                        <div class="cart-item-price">₹ 1200</div>
+                    </div>
+                    <div class="cart-quantity">
+                        <button type="button">-</button>
+                        1
+                        <button type="button">+</button>
+                    </div>
+                </div>
 
-    <section class="blog-cards">
-        <div class="cards-grid">
-            <article class="blog-card">
-                <img src="images/blogs/1.png" alt="Blog post image 1">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
+                <div class="cart-item">
+                    <img src="images/cart/2.png" alt="Whooper Cushion">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Whooper Cushion</div>
+                        <div class="cart-item-brand">PLAYIT</div>
+                        <div class="cart-item-price">₹ 820</div>
+                    </div>
+                    <div class="cart-quantity">
+                        <button type="button">-</button>
+                        1
+                        <button type="button">+</button>
+                    </div>
                 </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/2.png" alt="Blog post image 2">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/3.png" alt="Blog post image 3">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/4.png" alt="Blog post image 4">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/5.png" alt="Blog post image 5">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/6.png" alt="Blog post image 6">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/7.png" alt="Blog post image 7">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/8.png" alt="Blog post image 8">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-            <article class="blog-card">
-                <img src="images/blogs/9.png" alt="Blog post image 9">
-                <div class="blog-card-body">
-                    <div class="meta">08/04/2025</div>
-                    <h3>Updates On Educational Toys</h3>
-                    <p>“Welcome to our Educational toys section, where we share expert advice...</p>
-                    <button type="button">Read Now</button>
-                </div>
-            </article>
-        </div>
-    </section>
 
-    <section class="blog-banner">
-        <img src="images/blogs/banner.png" alt="Blog banner">
-        <div class="blog-banner-content">
-            <div class="banner-copy">
-                <h2>The Coolest Toy Store That Has Fluffy &amp; Slushy Toys</h2>
-                <p>Grab yours until it goes out of stock. Shop our limited-time collection of plush and playful
-                    favorites.</p>
-                <button type="button" class="banner-button">View All</button>
+                <div class="cart-item">
+                    <img src="images/cart/3.png" alt="Rainbow Coil Bands">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Rainbow Coil Bands</div>
+                        <div class="cart-item-brand">LEGO</div>
+                        <div class="cart-item-price">₹ 550</div>
+                    </div>
+                    <div class="cart-quantity">
+                        <button type="button">-</button>
+                        1
+                        <button type="button">+</button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="images/cart/4.png" alt="Unicorn Barbie Highlighter Pencils">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Unicorn Barbie Highlighter Pencils</div>
+                        <div class="cart-item-brand">BARBIE</div>
+                        <div class="cart-item-price">₹ 1070</div>
+                    </div>
+                    <div class="cart-quantity">
+                        <button type="button">-</button>
+                        1
+                        <button type="button">+</button>
+                    </div>
+                </div>
+
+                <div class="cart-item">
+                    <img src="images/cart/5.png" alt="Surprise Toy Pack">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">Surprise Toy Pack</div>
+                        <div class="cart-item-brand">PLAYIT</div>
+                        <div class="cart-item-price">₹ 740</div>
+                    </div>
+                    <div class="cart-quantity">
+                        <button type="button">-</button>
+                        1
+                        <button type="button">+</button>
+                    </div>
+                </div>
             </div>
+
+            <aside class="cart-summary">
+                <div class="summary-panel">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <strong>₹ 4580</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Delivery Charges</span>
+                        <strong>₹ 0</strong>
+                    </div>
+                    <div class="summary-row">
+                        <span>Discount</span>
+                        <strong>- ₹ 220</strong>
+                    </div>
+                    <div class="summary-row total">
+                        <span>TOTAL</span>
+                        <strong>₹ 4360</strong>
+                    </div>
+                    <button class="checkout-button" type="button">CHECKOUT</button>
+                    <div class="secure-payment">
+                        <span>🔒</span>
+                        100% Secure Payments
+                    </div>
+                </div>
+            </aside>
         </div>
-    </section>
-    <div id="services-panel-placeholder"></div>
+
+        <div id="services-panel-placeholder"></div>
+    </main>
 
     <div id="footer-placeholder"></div>
     <script>
